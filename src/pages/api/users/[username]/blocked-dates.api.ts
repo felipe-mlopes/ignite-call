@@ -53,7 +53,10 @@ export default async function handler(
       ON UTI.week_day = WEEKDAY(DATE_ADD(S.date, INTERVAL 1 DAY))
 
     WHERE S.user_id = ${user.id}
-      AND DATE_FORMAT(S.date, "%Y-%m") = ${`${year}-${String(month).padStart(2, '0')}`}
+      AND DATE_FORMAT(S.date, "%Y-%m") = ${`${year}-${String(month).padStart(
+        2,
+        '0',
+      )}`}
 
     GROUP BY EXTRACT(DAY FROM S.date),
       ((UTI.time_end_in_minutes - UTI.time_start_in_minutes) / 60)
@@ -61,7 +64,7 @@ export default async function handler(
     HAVING amount >= size
   `
 
-  const blockedDates = blockedDatesRaw.map(item => item.date)
+  const blockedDates = blockedDatesRaw.map((item) => item.date)
 
   return res.json({ blockedWeekDays, blockedDates })
 }

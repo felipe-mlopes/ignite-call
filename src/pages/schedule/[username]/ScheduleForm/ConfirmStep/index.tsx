@@ -21,7 +21,10 @@ interface ConfirmStepProps {
   onCancelConfirmation: () => void
 }
 
-export function ConfirmStep({ schedulingDate, onCancelConfirmation }: ConfirmStepProps) {
+export function ConfirmStep({
+  schedulingDate,
+  onCancelConfirmation,
+}: ConfirmStepProps) {
   const {
     register,
     handleSubmit,
@@ -40,7 +43,7 @@ export function ConfirmStep({ schedulingDate, onCancelConfirmation }: ConfirmSte
       name,
       email,
       observation,
-      date: schedulingDate
+      date: schedulingDate,
     })
 
     onCancelConfirmation()

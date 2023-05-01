@@ -1,4 +1,4 @@
-import { Box, Text, styled } from "@ignite-ui/react";
+import { Box, Text, styled } from '@ignite-ui/react'
 
 export const ConfirmForm = styled(Box, {
   maxWidth: 540,
@@ -37,7 +37,7 @@ export const FormHeader = styled('div', {
 })
 
 export const FormError = styled(Text, {
-  color: '#f75a68'
+  color: '#f75a68',
 })
 
 export const FormActions = styled('div', {

@@ -1,4 +1,4 @@
-import { Box, Text, styled } from "@ignite-ui/react";
+import { Box, Text, styled } from '@ignite-ui/react'
 
 export const IntervalBox = styled(Box, {
   marginTop: '$6',
@@ -20,7 +20,7 @@ export const IntervalItem = styled('div', {
 
   '& + &': {
     borderTop: '1px solid $gray600',
-  }
+  },
 })
 
 export const IntervalDay = styled('div', {
@@ -35,11 +35,11 @@ export const IntervalInputs = styled('div', {
   gap: '$2',
 
   'input::-webkit-calendar-picker-indicator': {
-    filter: 'invert(100%) brightness(30%)'
-  }
+    filter: 'invert(100%) brightness(30%)',
+  },
 })
 
 export const FormError = styled(Text, {
   color: '#f75a68',
-  marginBottom: '$4'
+  marginBottom: '$4',
 })
